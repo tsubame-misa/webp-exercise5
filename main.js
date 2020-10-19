@@ -7,7 +7,7 @@ function randomValueFromArray(array) {
   return array[random];
 }
 
-let storyText = `It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.`;
+const storyText = `It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.`;
 const insertX = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
 const insertY = ["the soup kitchen", "Disneyland", "the White House"];
 const insertZ = [
@@ -21,9 +21,9 @@ randomize.addEventListener("click", result);
 function result() {
   console.log("function");
   let newStory = storyText;
-  let xItem = randomValueFromArray(insertX);
-  let yItem = randomValueFromArray(insertY);
-  let zItem = randomValueFromArray(insertZ);
+  const xItem = randomValueFromArray(insertX);
+  const yItem = randomValueFromArray(insertY);
+  const zItem = randomValueFromArray(insertZ);
   newStory = newStory.replace(/:insertx:/g, xItem);
   newStory = newStory.replace(":inserty:", yItem);
   newStory = newStory.replace(":insertz:", zItem);
